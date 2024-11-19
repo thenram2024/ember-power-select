@@ -30,7 +30,7 @@ jobs:
           cache: 'pnpm'
 
       - name: 'Install dependencies'
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - run: pnpm build
       - run: pnpm i -f # re-sync injected deps
@@ -57,7 +57,7 @@ jobs:
           cache: pnpm
       
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - run: pnpm build
       - run: pnpm i -f # re-sync injected deps
@@ -85,7 +85,7 @@ jobs:
           cache: pnpm
           
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - run: pnpm build
       - run: pnpm i -f # re-sync injected deps
